@@ -1,0 +1,25 @@
+HistData.com (c) 2012
+File: DAT_XLSX_EURUSD_M1_201902.csv Status Report
+
+Gap of 70s found between 20190204170104 and 20190204170220.
+Gap of 66s found between 20190210172237 and 20190210172349.
+Gap of 60s found between 20190213170215 and 20190213170321.
+Gap of 64s found between 20190217174827 and 20190217174938.
+Gap of 65s found between 20190218160859 and 20190218161011.
+Gap of 72s found between 20190218162635 and 20190218162753.
+Gap of 62s found between 20190218182101 and 20190218182209.
+Gap of 87s found between 20190218182255 and 20190218182428.
+Gap of 108s found between 20190218184416 and 20190218184611.
+Gap of 78s found between 20190220181801 and 20190220181926.
+Gap of 86s found between 20190220182344 and 20190220182516.
+Gap of 75s found between 20190221151159 and 20190221151320.
+Gap of 104s found between 20190221170045 and 20190221170236.
+Gap of 78s found between 20190224172835 and 20190224173000.
+Gap of 61s found between 20190225162549 and 20190225162657.
+Gap of 86s found between 20190225163838 and 20190225164010.
+Gap of 90s found between 20190226175200 and 20190226175336.
+Gap of 65s found between 20190228003108 and 20190228003219.
+Gap of 73s found between 20190228170309 and 20190228170428.
+
+Average tick interval: 5474 miliseconds.
+Maximum tick interval found: 108617 miliseconds.
