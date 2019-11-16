@@ -5,6 +5,7 @@ var data, globaldata;
 var date = [], year = [], month = [], day = [], hour = [], minute = [], weekday = [], actual = [], change = []
 var e = 10;
 var s = 0;
+var range = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function getdata() {
 
@@ -19,40 +20,64 @@ function getdata() {
 
       actual.push(zz['actual'])
       change.push(zz['change'])
+      if (zz['minute'] < 10) {
+        minute.push(`:0${zz['minute']}`)
+      }
+      else {
+        minute.push(`:${zz['minute']}`)
+      }
+      
     });
     
     // globaldata = xx;
 
-    // console.log(actual)
+    console.log(minute)
     draw()
   })
 }
 
-var ydata, date, hour;
-function newdata() {
-  var ydata;
-  e++;
+var ydata, date, hour, minutex;
+function yact() {
+  e += 1;
 
   ydata = globaldata[e]['actual']
+
+  return ydata;
+}
+
+function newdata() {
   date = globaldata[e]['date']
   hour = globaldata[e]['hour']
 
-  return [ydata, date, hour];
+  return [date, hour];
 }
 
-// Plotly.plot('plot', [{ 
-//   y: [(getdata)],
-//   type: 'line',
-//   line: {
-//     color: "blue"
-//   }
-// }]); 
+
+function mini() {
+  e2 = e - 1
+
+  if (globaldata[e2]['minute'] < 10) {
+    minute.push(`:0${globaldata[e2]['minute']}`)
+  }
+  else {
+    minute.push(`:${globaldata[e2]['minute']}`)
+  }
+
+  minutex = minute
+
+  if (e2 > 20) {
+    minute.shift()
+  }
+
+  console.log(minutex)
+  return minutex;
+
+}
 
 function draw() {
 
   var trace1 = {
     type: "line",
-    // mode: "lines",
     y: actual,
     line: {
       color: "blue"
@@ -70,7 +95,10 @@ function draw() {
       rotation: 90,
     },
     xaxis: {
-      title: `Hour: <b>${newdata()[2]}</b>, Day: ${newdata()[1]}`,
+      title: `Hour: <b>${newdata()[1]}</b>, Day: ${newdata()[0]}`,
+      dtick: 1,
+      ticktext: minute,
+      tickvals: range
     }
   };
 
@@ -79,96 +107,45 @@ function draw() {
 }
 
 
-var x = 0
+var x = 9
 
 function interval() {
 setInterval(() => {
 
   Plotly.extendTraces('plot', {
-    y: [[newdata()[0]]]}, [0]);
+    y: [[yact()]]}, [0]);
   
-    x++;
-    console.log(newdata()[1])
+    x += 1;
+
+    var rangex;
+    range.push(x)
+
+    rangex = range
+    if (e > 20) {
+      rangex.shift()
+    }
+
+    if (x < 20) {
+      Plotly.relayout('plot', {
+        xaxis: {
+          dtick: 1,
+          ticktext: mini(),
+          tickvals: range
+        }
+      })
+    }
 
     if (x > 20) {
       Plotly.relayout('plot', {
         xaxis: {
           range: [x - 20, x],
-          title: `Hour: <b>${newdata()[2]}</b>, Day: ${newdata()[1]}`,
+          title: `Hour: <b>${newdata()[1]}</b>, Day: ${newdata()[0]}`,
+          dtick: 1,
+          ticktext: mini(),
+          tickvals: rangex
         }
-        // yaxis2: {
-        //   title: 'yaxis2 title',
-        //   titlefont: {color: '#ff7f0e'},
-        //   tickfont: {color: '#ff7f0e'},
-        //   anchor: 'free',
-        //   overlaying: 'y',
-        //   side: 'left',
-        //   position: 0.15
-        // }
       })
     }
   
 }, 500);
 }
-/*/
-var s = 0
-var e = 10
-
-var data;
-
-function getdata() {
-
-  var url = `/data`;
-
-  d3.json(url).then(function(xx) {
-    
-    globaldata = xx;
-    slicer()
-  })
-};
-
-var date = [], year = [], month = [], day = [], hour = [], minute = [], weekday = [], actual = [], change = []
-var b = 0
-
-// function iterate() {
-//   e += 1
-
-//   if (e > 60) {
-//     s = (e - 60)
-//   }
-
-// }
-
-function slicer() {
-  // date = [], year = [], month = [], day = [], hour = [], minute = [], weekday = [], actual = [], change = []
-
-  data = globaldata.slice(s, e)
-
-  catagorize()
-};
-
-var a1 = 0;
-
-function catagorize() {
-
-  console.log(data)
-
-    data.forEach(zz => {
-      date.push(zz['date'])
-      hour.push(zz['hour'])
-      minute.push(zz['minute'])
-      actual.push(zz['actual'])
-      change.push(zz['change'])
-      
-    });
-
-    date_unq = [...new Set(date)]
-    console.log(date_unq)
-    if (date_unq > 1) {
-      date_unq = `${date_unq[0]} - ${date_unq[1]}`
-    }
-  
-  draw();
-}
-
-/*/
