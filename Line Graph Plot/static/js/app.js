@@ -56,11 +56,22 @@ function newdata() {
 function mini() {
   e2 = e - 1
 
+  if (e2 < 20) {
+  if (globaldata[e]['minute'] < 10) {
+    minute.push(`:0${globaldata[e]['minute']}`)
+  }
+  else {
+    minute.push(`:${globaldata[e]['minute']}`)
+  }
+  }
+
+  if (e2 >= 20) {
   if (globaldata[e2]['minute'] < 10) {
     minute.push(`:0${globaldata[e2]['minute']}`)
   }
   else {
     minute.push(`:${globaldata[e2]['minute']}`)
+  }
   }
 
   minutex = minute
@@ -69,7 +80,7 @@ function mini() {
     minute.shift()
   }
 
-  console.log(minutex)
+  // console.log(minutex)
   return minutex;
 
 }
@@ -147,5 +158,5 @@ setInterval(() => {
       })
     }
   
-}, 500);
+}, 250);
 }
