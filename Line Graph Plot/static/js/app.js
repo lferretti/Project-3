@@ -1,11 +1,75 @@
 
 getdata();
 
+
 var data, globaldata;
-var date = [], year = [], month = [], day = [], hour = [], minute = [], weekday = [], actual = [], change = []
-var e = 10;
+var date = [], year = [], month = [], day = [], hour = [], minute = [], weekday = [], actual = [], poschange = [], negchange = []
+// var gogo = false
+var gogo = true
+var max = 0
+
+var e = Math.max(0, (max - 10));
+xrange = 40
 var s = 0;
-var range = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var lineID = 'plot';
+var barID = 'residual';
+
+var range = Array(xrange).fill().map((x, i) => i);
+
+var filterbtn = d3.select("#filter");
+filterbtn.on("click", filterer)
+var filtered, date_input, hour_input;
+var hour_in, date_in;
+
+
+
+// FILTER FUNTCIONS
+// FILTER FUNTCIONS
+// FILTER FUNTCIONS
+// FILTER FUNTCIONS
+// FILTER FUNTCIONS
+
+
+function filterer() {
+
+  clearInterval(go)
+  speed = 1000
+
+  date_input = document.getElementById('date').value
+  hour_input = document.getElementById('hour').value
+  date_in = new Date(date_input);
+  hour_in = Number(hour_input);
+
+  // console.log(date_in, hour_in)
+
+  filtered = globaldata.filter(x => new Date(x['date']) >= date_in)
+
+  var date_chk = new Date(filtered[0]['date'])
+  var hour_chk = filtered[0]['hour']
+
+  if (String(date_chk) === String(date_in) && hour_chk != hour_in && hour_chk > hour_in) {
+    d3.select('#hour').attr('value', hour)
+    hour_in = hour_chk
+  }
+  // console.log(date_chk, date_in, hour_chk, hour_in)
+  OntheHour();
+}
+
+
+function OntheHour() {
+
+  function ClockStrikes(y) {
+    return y['hour'] == hour_in;
+  }
+
+  var ind = filtered.findIndex(ClockStrikes)
+  var new_data = filtered.slice(ind);
+
+
+  globaldata = new_data;
+  makedata();
+}
+
 
 function getdata() {
 
@@ -13,13 +77,55 @@ function getdata() {
 
   d3.json(url).then(function(xx) {
 
-    data = xx.slice(0, 10);
+    data = []
+    // xx.slice(s, e)
     globaldata = xx;
+
+  actual = [], minute = []
+    
+  makedata();
+
+})
+}
+
+// Data Intitalizer
+// Data Intitalizer
+// Data Intitalizer
+// Data Intitalizer
+// Data Intitalizer
+// Data Intitalizer
+
+function makedata() {
+
+  actual = [], minute = [], poschange = [], negchange = []
+  max = 0
+  e = Math.max(0, (max - 10));
+  s = 0
 
     data.forEach(zz => {
 
       actual.push(zz['actual'])
-      change.push(zz['change'])
+      var change = zz['change']
+
+      if (change < 0) {
+        negchange = change 
+        poschange = 0
+      }
+      else {
+        poschange = change
+        negchange = 0
+      }
+
+    });
+
+    clock()
+}
+
+function clock() {
+  clockdata = globaldata.slice(s, xrange)
+
+   clockdata.forEach(zz => {
+
       if (zz['minute'] < 10) {
         minute.push(`:0${zz['minute']}`)
       }
@@ -28,21 +134,43 @@ function getdata() {
       }
       
     });
-    
-    // globaldata = xx;
 
-    console.log(minute)
-    draw()
-  })
+    // console.log(minute)
+    drawline()
 }
 
-var ydata, date, hour, minutex;
+// Data Call Iterators
+// Data Call Iterators
+// Data Call Iterators
+// Data Call Iterators
+// Data Call Iterators
+// Data Call Iterators
+
+var ydata, yneg, ypos, date, hour, minutex;
 function yact() {
   e += 1;
+  s += 1;
 
   ydata = globaldata[e]['actual']
 
   return ydata;
+}
+
+function ychange() {
+
+  var delta = globaldata[e]['change']
+  
+  if (delta < 0) {
+    yneg = delta
+    ypos = ''
+  }
+  else {
+    ypos = delta
+    yneg = ''
+  }
+
+
+  return [ypos, yneg];
 }
 
 function newdata() {
@@ -52,111 +180,278 @@ function newdata() {
   return [date, hour];
 }
 
+var e2 = xrange
 
 function mini() {
-  e2 = e - 1
+  e2 = e2 + 1
+  
+  minim = globaldata[e2]['minute'] 
 
-  if (e2 < 20) {
-  if (globaldata[e]['minute'] < 10) {
-    minute.push(`:0${globaldata[e]['minute']}`)
+  if (minim < 10) {
+    minute.push(`:0${minim}`)
   }
   else {
-    minute.push(`:${globaldata[e]['minute']}`)
-  }
-  }
-
-  if (e2 >= 20) {
-  if (globaldata[e2]['minute'] < 10) {
-    minute.push(`:0${globaldata[e2]['minute']}`)
-  }
-  else {
-    minute.push(`:${globaldata[e2]['minute']}`)
-  }
+    minute.push(`:${minim}`)
   }
 
-  minutex = minute
-
-  if (e2 > 20) {
-    minute.shift()
-  }
-
-  // console.log(minutex)
-  return minutex;
+  // if (minute.length > max) {
+  minute.shift()
+  // }
+  // console.log(minute)
+  return minute;
 
 }
 
-function draw() {
+// GRAPHS
+// GRAPHS
+// GRAPHS
+// GRAPHS
+// GRAPHS
+// GRAPHS
 
-  var trace1 = {
-    type: "line",
+
+var datap; 
+function drawline() {
+
+  d3.select(`#${lineID}`).html('')
+
+  var trace1L = {
+    type: "scatter",
+    mode: 'lines',
     y: actual,
     line: {
       color: "blue"
     }
   };
 
-  var datap = [trace1];
+  datap = [trace1L];
 
-  var layout = {
-    title: `EUR-USD Forex`,
+  var layoutL = {
+    title: `EUR-USD Forex <br>`,
     yaxis: {
-      autorange: true,
-      type: "linear",
       title: `EURO to USD Rate`,
-      rotation: 90,
+      orientation: 'h',
+      tickfont: {
+        size: 'auto',
+      },
+      range: [0, 0],
+      autorange: true,
+      // type: "linear",
+      dtick: .0001,
     },
     xaxis: {
+      range: [0, xrange],
       title: `Hour: <b>${newdata()[1]}</b>, Day: ${newdata()[0]}`,
-      dtick: 1,
+      tick0: 1,
       ticktext: minute,
-      tickvals: range
+      tickvals: range,
     }
   };
 
-  Plotly.newPlot("plot", datap, layout, {responsive: true});
-  interval();
+  Plotly.newPlot(lineID, datap, layoutL, {responsive: true});
+
+  drawbar();
+}
+
+//
+//
+//
+
+var datab; 
+function drawbar() {
+
+  d3.select(`#${barID}`).html('')
+
+  var trace1b = {
+    name: 'increase',
+    type: "bar",
+    y: poschange,
+    marker: {
+      color: "green"
+    }
+  };
+
+  var trace2b = {
+    name: 'decrease',
+    type: "bar",
+    y: negchange,
+    marker: {
+      color: "red"
+    }
+  };
+
+  datab = [trace1b, trace2b];
+
+  var layoutb = {
+    barmode: 'stack',
+    showlegend: false,
+    yaxis: {
+      title: `Change`,
+      orientation: 'h',
+      tickfont: {
+        size: 'auto',
+      },
+      range: [0, 0],
+      autorange: true,
+      type: "linear",
+      dtick: .0001,
+    },
+    xaxis: {
+      range: [0, xrange],
+      dtick: 1,
+
+    }
+  };
+
+  Plotly.newPlot(barID, datab, layoutb, {responsive: true});
+
+  if (gogo == true) {
+    setTimeout(interval(), 3000);
+  }
 }
 
 
-var x = 9
+// INTERVAL
+// INTERVAL
+// INTERVAL
+// INTERVAL
+// INTERVAL
+// INTERVAL
+
+
+var x = 0
+var go;
+// var speed = 60000;
+var speed = 1000;
 
 function interval() {
-setInterval(() => {
+go = setInterval(() => {
 
-  Plotly.extendTraces('plot', {
+  Plotly.extendTraces(lineID, {
     y: [[yact()]]}, [0]);
+
+  var changling = ychange()
+  // console.log(changling[0], changling[1])
   
+  Plotly.extendTraces(barID, {
+    y: [[changling[0]]]}, [0]);
+  
+  Plotly.extendTraces(barID, {
+    y: [[changling[1]]]}, [1]);
+
+    xrng_adj = xrange-10
+
+    if (e > xrng_adj) {
+      datap[0].y.shift();
+      datab[0].y.shift();
+      datab[1].y.shift();
+    }
+
     x += 1;
 
-    var rangex;
-    range.push(x)
-
-    rangex = range
-    if (e > 20) {
-      rangex.shift()
+    if (e < max) {
+      range.push(x)
     }
 
-    if (x < 20) {
-      Plotly.relayout('plot', {
-        xaxis: {
-          dtick: 1,
-          ticktext: mini(),
-          tickvals: range
-        }
-      })
-    }
 
-    if (x > 20) {
-      Plotly.relayout('plot', {
+    if (e > xrng_adj) {
+    labels = mini()
+    
+      Plotly.relayout(lineID, {
         xaxis: {
-          range: [x - 20, x],
+          range: [0, xrange],
           title: `Hour: <b>${newdata()[1]}</b>, Day: ${newdata()[0]}`,
-          dtick: 1,
-          ticktext: mini(),
-          tickvals: rangex
-        }
+          ticktext: labels,
+          tickvals: range,
+        },
+      })
+
+      Plotly.relayout(barID, {
+        xaxis: {
+          range: [0, xrange],
+        },
       })
     }
   
-}, 250);
+}, speed);
 }
+
+
+//  BUTTONS
+//  BUTTONS
+//  BUTTONS
+//  BUTTONS
+//  BUTTONS
+//  BUTTONS
+//  BUTTONS
+//  BUTTONS
+
+
+
+var speedset = d3.select("#speed")
+
+function spedometer() {
+  speedout = document.getElementById('speed');
+  speedout.value = speed/1000;
+}
+
+speedset.on("change", function() {
+  clearInterval(go); 
+  speed = speedset.property("value")*1000;
+  if (speed == 0) {
+    clearInterval(go)
+    speed = 0
+    spedometer()
+  }
+  else {
+    interval()
+  }
+})
+
+var pausebtn = d3.select("#pause");
+pausebtn.on("click", function() {
+  clearInterval(go)
+  speed = 0
+  spedometer() 
+})
+
+var speedout = d3.select("#speed")
+
+var playbtn = d3.select("#play");
+playbtn.on("click", function() {
+  clearInterval(go)
+  speed = 1000; 
+  spedometer()
+  interval()
+})
+
+var fwdbtn = d3.select("#fwd");
+fwdbtn.on("click", function() {
+  clearInterval(go); 
+  speed = (speed * .5);
+  if (speed == 0) {
+    clearInterval(go)
+    speed = 0
+  }
+  else {
+    interval()
+  }
+  spedometer() 
+}
+)
+
+var slowbtn = d3.select("#slow");
+slowbtn.on("click", function() {
+  clearInterval(go); 
+  speed = (speed * 2);
+  if (speed == 0) {
+    clearInterval(go)
+    speed = 0
+  }
+  else {
+    interval()
+  }
+  spedometer() 
+})
+
+
