@@ -14,14 +14,13 @@ var s = 0;
 var lineID = 'plot';
 var barID = 'residual';
 
-var range = Array(xrange).fill().map((x, i) => i);
+var range = Array(xrange).fill().map((x, z) => z);
+var range2 = Array(xrange).fill().map((x, z) => z + .5);
 
 var filterbtn = d3.select("#filter");
 filterbtn.on("click", filterer)
 var filtered, date_input, hour_input;
 var hour_in, date_in;
-
-
 
 // FILTER FUNTCIONS
 // FILTER FUNTCIONS
@@ -31,8 +30,8 @@ var hour_in, date_in;
 
 function filterer() {
 
-  clear(go);
-  speed = 1000
+  clear();
+  speedreset()
   spedometer();
 
   date_input = document.getElementById('date').value
@@ -104,7 +103,10 @@ function makedata() {
   d3.select(`#${lineID}`).html('')
   d3.select(`#${barID}`).html('')
 
-  actual = [], minute = [], poschange = [], negchange = []
+  pts = [], avg = [], y0 = [], y1 = [], x0 = [], x1 = [], color = []
+  signif = false
+  wait = 0
+  actual = [], minute = [], poschange = [], negchange = [], shapes = []
   max = 0
   e = Math.max(0, (max - 10));
   s = 0
@@ -154,11 +156,10 @@ function clock() {
 // Data Call Iterators
 
 var ydata, yneg, ypos, date, hour, minutex, runitback;
+var shapeact = [], shapechange = [];
 runitback = false
 
 function yact() {
-
-  rst_len = globaldata.length
 
   e += 1;
   s += 1;
@@ -171,6 +172,11 @@ function yact() {
 function ychange() {
 
   var delta = globaldata[e]['change']
+  shapechange.push(globaldata[e]['change'])
+
+  if (shapechange.length > 30) {
+    shapechange.shift()
+  }
   
   if (delta < 0) {
     yneg = delta
@@ -203,6 +209,7 @@ function mini() {
   catch {
     console.log('Reset')
     clear()
+    speedreset()
     globaldata = reset
     makedata()
   }
@@ -214,9 +221,7 @@ function mini() {
     minute.push(`:${minim}`)
   }
 
-  // if (minute.length > max) {
   minute.shift()
-  // }
   // console.log(minute)
   return minute;
 
@@ -233,8 +238,6 @@ function mini() {
 var linedata; 
 function drawline() {
 
-  
-
   var linetrace1 = {
     type: "scatter",
     mode: 'lines',
@@ -246,7 +249,7 @@ function drawline() {
 
   linedata = [linetrace1];
 
-  var layoutL = {
+  var linelay = {
     title: `EUR-USD Forex <br>`,
     yaxis: {
       title: `EURO to USD Rate`,
@@ -263,25 +266,27 @@ function drawline() {
     xaxis: {
       range: [0, xrange],
       title: `Hour: <b>${newdata()[1]}</b>, Day: ${newdata()[0]}`,
-      tick0: 1,
+      tick0: 0,
+      dtick: 1,
       ticktext: minute,
       tickvals: range,
     }
   };
 
-  Plotly.newPlot(lineID, linedata, layoutL, {responsive: true});
+  Plotly.newPlot(lineID, linedata, linelay, {responsive: true});
 
   drawbar();
 }
 
-//
-//
-//
+// BAR
+// BAR
+// BAR
+// BAR
+// BAR
+
 
 var bardata; 
 function drawbar() {
-
-
 
   var bartrace1 = {
     name: 'increase',
@@ -303,10 +308,11 @@ function drawbar() {
 
   bardata = [bartrace1, bartrace2];
 
-  var layoutb = {
+  var barlay = {
     barmode: 'stack',
     showlegend: false,
     yaxis: {
+      showgrid: true,
       showticklabels: false,
       title: `Change`,
       orientation: 'h',
@@ -319,14 +325,15 @@ function drawbar() {
       dtick: .0001,
     },
     xaxis: {
+      showgrid: true,
       showticklabels: false,
-      range: [-.5, xrange],
+      range: [.5, xrange],
       dtick: 1,
-
+      tickvals: range2,
     }
   };
 
-  Plotly.newPlot(barID, bardata, layoutb, {responsive: true});
+  Plotly.newPlot(barID, bardata, barlay, {responsive: true});
 
   if (gogo == true) {
     setTimeout(interval(), 3000);
@@ -342,72 +349,85 @@ function drawbar() {
 // INTERVAL
 
 
-var x = 0
+// var x = 0
 var go;
 // var speed = 60000;
 var speed = 1000;
+var once = 0
+var shapes = []
 
 function interval() {
-go = setInterval(() => {
+if (once == 0) {
+  go = setInterval(() => {
 
-  Plotly.extendTraces(lineID, {
-    y: [[yact()]]}, [0]);
+    once = 1;
 
-  var changling = ychange()
-  // console.log(changling[0], changling[1])
-  
-  Plotly.extendTraces(barID, {
-    y: [[changling[0]]]}, [0]);
-  
-  Plotly.extendTraces(barID, {
-    y: [[changling[1]]]}, [1]);
+    Plotly.extendTraces(lineID, {
+      y: [[yact()]]}, [0]);
 
-    xrng_adj = xrange-10
-
-    if (e > xrng_adj) {
-      linedata[0].y.shift();
-      bardata[0].y.shift();
-      bardata[1].y.shift();
-    }
-
-    x += 1;
-
-    if (e < max) {
-      range.push(x)
-    }
-
-    Plotly.relayout(lineID, {
-      yaxis: {
-        showticklabels: true,
-      }
-    })
-    Plotly.relayout(barID, {
-      yaxis: {
-        showticklabels: true,
-      }
-    })
-
-
-    if (e > xrng_adj) {
-    labels = mini()
+    var changling = ychange()
+    // console.log(changling[0], changling[1])
     
+    Plotly.extendTraces(barID, {
+      y: [[changling[0]]]}, [0]);
+    
+    Plotly.extendTraces(barID, {
+      y: [[changling[1]]]}, [1]);
+
+      xrng_adj = xrange-9
+
+      if (e > xrng_adj) {
+        linedata[0].y.shift();
+        bardata[0].y.shift();
+        bardata[1].y.shift();
+      }
+
+      // x += 1;
+
+      // if (e < max) {
+      //   range.push(x)
+      // }
+
       Plotly.relayout(lineID, {
-        xaxis: {
-          range: [-.5, xrange],
-          title: `Hour: <b>${newdata()[1]}</b>, Day: ${newdata()[0]}`,
-          ticktext: labels,
-          tickvals: range,
+        yaxis: {
+          showticklabels: true,
+        }
+      })
+      Plotly.relayout(barID, {
+        yaxis: {
+          showticklabels: true,
         },
       })
 
-      Plotly.relayout(barID, {
-        xaxis: {
-          showticklabels: false,
-          range: [-.5, xrange],
-        },
-      })
-    }
-  }, speed);
+    workshop()
+
+    xrng_adj
+      if (e > xrng_adj) {
+      labels = mini()
+      
+        Plotly.relayout(lineID, {
+          xaxis: {
+            range: [0, xrange+1],
+            title: `Hour: <b>${newdata()[1]}</b>, Day: ${newdata()[0]}`,
+            ticktext: labels,
+            tickvals: range,
+            tick0: 0,
+            dtick: 1,
+          },
+          shapes: shapes,
+        })
+
+        Plotly.relayout(barID, {
+          xaxis: {
+            showticklabels: false,
+            showgrid: true,
+            range: [.5, xrange],
+            tickvals: range2,
+          },
+        })
+      }
+    }, speed);
+  }
 }
 
 
@@ -442,13 +462,19 @@ speedset.on("change", function() {
   }
 })
 
+
 function clear() {
-    clearInterval(go)
+  once = 0;
+  clearInterval(go)
+}
+
+function speedreset() {
+  speed = 1000;
 }
 
 var pausebtn = d3.select("#pause");
 pausebtn.on("click", function() {
-  console.log('Pause Working')
+  console.log('Pause')
   clear()
   speed = 0
   spedometer() 
@@ -459,7 +485,7 @@ var speedout = d3.select("#speed")
 var playbtn = d3.select("#play");
 playbtn.on("click", function() {
   clear()
-  speed = 1000; 
+  speedreset()
   spedometer()
   interval()
 })
@@ -473,9 +499,9 @@ fwdbtn.on("click", function() {
     clear()
     speed = 0
   }
-  else {
-    var cap= Math.max(100, speed)
 
+  else {
+    var cap= Math.max(500, speed)
     speed = cap
     interval()
   }
@@ -501,58 +527,134 @@ slowbtn.on("click", function() {
 })
 
 
-// SVG Trace
-// SVG Trace
-// SVG Trace
-// SVG Trace
-// SVG Trace
-// SVG Trace
-/*/
-var pts = []
-var avg = []
-var xxpts = []
-var
-function averages() {
-  ea = e - 15
-  pts = actual.slice(ea, e)
+// SVG Trace ###
+// SVG Trace ###
+// SVG Trace ###
+// SVG Trace ###
+// SVG Trace ###
+// SVG Trace ###
 
 
-  for(i = 0; i < pts.length; i++ ){
-    var sum;
-    sum += pts[i];
+var pts = [], avg = [], y0 = [], y1 = [], x0 = [], x1 = [], color = [], profit, signif, trend, len, wait
+signif = false
+wait = 0
 
-    if (i == 0 || i == avg.length) {
-      xypts.push(avg[i])
-    }
-
-    var x = sum/(pts.length)
-    avg.push(x)
-
+function workshop() {
+  if (wait == 0 && e >= 15) {
+    sum()
   }
+  else if (wait > 0) {
+    wait = Math.max(0, wait - 1)
+  }
+  craft()
+}
 
-  if (avg.length == 15) {
-    graphit(avg, xypts)
+function sum() {
+  end = shapechange.length
+  start = end - 15
+  pts = shapechange.slice(start, end)
+  actpts = linedata[0].y.slice(start, end)
+
+  // console.log('pts', pts)
+  len = pts.length - 1
+
+  avg.push(pts.reduce((first, second) => first + second) / pts.length)
+  // console.log("AVG", avg)
+
+  if (avg.length > 15) {
     avg.shift()
+    avgcalc()
+    // console.log("AVG", avg)
   }
 
 }
 
-function graphit(avg, xypts) {
+function avgcalc() {
 
-  for(i = 0; i < pts.length; i++ ){
-    var sum2;
-    sum2 += pts[i];
-    var x = sum/(pts.length)
+  var endval, startval;
+  endval = actpts[len]
+  startval = actpts[0]
+  
+  trend = avg.reduce((first, second) => first + second) / avg.length
 
-    if (i == 0 || i == avg.length) {
-      xypts.push(avg[i])
+  var lim = .000005
+  if (trend > lim || trend < (lim*-1)) {
+    signif = true
+
+    if (endval > startval) {
+      color.push('green')
+    }
+    else {
+      color.push('red')
+      // console.log(endval, startval, actpts)
     }
 
-    
-    avg.push(x)
-
   }
-  
+  else {
+    signif = false
+  }
+
+  if (signif == true) {
+    x0.push(start)
+    y0.push(startval)
+    x1.push(end)
+    y1.push(endval)
+    wait = 25
+    console.log("Trend", trend, signif)
+  }
+  craft()
 
 }
-/*/
+
+function craft() {
+  var adjx0 = [], adjx1 = [], adjy0 = [], adjy1 = []
+  shapes = []
+  // console.log(x1[0])
+  if (x1[0] < 0) {
+    x0.shift()
+    y0.shift()
+    x1.shift()
+    y1.shift()
+    color.shift()
+  }
+
+  for(i = 0; i < x1.length; i++) {
+
+  shapes.push({
+    type: 'rect',
+    xref: 'x',
+    yref: 'paper',
+    x0: x0[i],
+    y0: 0,
+    x1: x1[i],
+    y1: 1,
+    fillcolor: color[i],
+    opacity: 0.2,
+    line: {
+        width: 0
+    }
+    })
+    shapes.push({
+      type: 'line',
+      x0: x0[i],
+      y0: y0[i],
+      x1: x1[i] + 10,
+      y1: y1[i],
+      line: {
+        color: 'black',
+        width: 2,
+        dash: 'dashdot'
+      }
+    })
+
+    adjx0.push(x0[i] - 1)
+    adjy0.push(y0[i] - 1)
+    adjx1.push(x1[i] - 1)
+    adjy1.push(y1[i] - 1)
+  }
+
+  x0 = adjx0
+  // y0 = adjy0
+  x1 = adjx1
+
+}
