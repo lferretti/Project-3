@@ -2,7 +2,7 @@
 getdata();
 
 
-var data, globaldata, reset;
+var data, globaldata;
 var date = [], year = [], month = [], day = [], hour = [], minute = [], weekday = [], actual = [], poschange = [], negchange = []
 // var gogo = false
 var gogo = true
@@ -29,14 +29,33 @@ var hour_in, date_in;
 // FILTER FUNTCIONS
 // FILTER FUNTCIONS
 
+var day = d3.select("#hour")
+day.on("change", function() {
+
+  console.log('Working')
+
+  var hour_in = day.value
+  
+  if (hour_in > 23) {
+    hour_in = 23
+    day.attr('value', hour_in)
+  }
+  else if (hour_in < 0) {
+    hour_in = 0
+    day.attr('value', hour_in)
+  }
+})
+
 function filterer() {
 
-  clear(go);
+  console.log(hour_in, date_in)
+
+  clearInterval(go)
   speed = 1000
-  spedometer();
 
   date_input = document.getElementById('date').value
   hour_input = document.getElementById('hour').value
+
   date_in = new Date(date_input);
   hour_in = Number(hour_input);
 
@@ -50,9 +69,6 @@ function filterer() {
   if (String(date_chk) === String(date_in) && hour_chk != hour_in && hour_chk > hour_in) {
     d3.select('#hour').attr('value', hour)
     hour_in = hour_chk
-  }
-  else if (String(date_chk) > String(date_in)) {
-
   }
   // console.log(date_chk, date_in, hour_chk, hour_in)
   OntheHour();
@@ -83,7 +99,6 @@ function getdata() {
     data = []
     // xx.slice(s, e)
     globaldata = xx;
-    reset = xx;
 
   actual = [], minute = []
     
@@ -100,9 +115,6 @@ function getdata() {
 // Data Intitalizer
 
 function makedata() {
-
-  d3.select(`#${lineID}`).html('')
-  d3.select(`#${barID}`).html('')
 
   actual = [], minute = [], poschange = [], negchange = []
   max = 0
@@ -153,13 +165,8 @@ function clock() {
 // Data Call Iterators
 // Data Call Iterators
 
-var ydata, yneg, ypos, date, hour, minutex, runitback;
-runitback = false
-
+var ydata, yneg, ypos, date, hour, minutex;
 function yact() {
-
-  rst_len = globaldata.length
-
   e += 1;
   s += 1;
 
@@ -195,17 +202,9 @@ function newdata() {
 var e2 = xrange
 
 function mini() {
-
-  try {
-    e2= e2 + 1
-    minim = globaldata[e2]['minute'] 
-  }
-  catch {
-    console.log('Reset')
-    clear()
-    globaldata = reset
-    makedata()
-  }
+  e2 = e2 + 1
+  
+  minim = globaldata[e2]['minute'] 
 
   if (minim < 10) {
     minute.push(`:0${minim}`)
@@ -233,7 +232,7 @@ function mini() {
 var linedata; 
 function drawline() {
 
-  
+  d3.select(`#${lineID}`).html('')
 
   var linetrace1 = {
     type: "scatter",
@@ -281,7 +280,7 @@ function drawline() {
 var bardata; 
 function drawbar() {
 
-
+  d3.select(`#${barID}`).html('')
 
   var bartrace1 = {
     name: 'increase',
@@ -407,7 +406,8 @@ go = setInterval(() => {
         },
       })
     }
-  }, speed);
+  
+}, speed);
 }
 
 
@@ -430,10 +430,10 @@ function spedometer() {
 }
 
 speedset.on("change", function() {
-  clear(); 
+  clearInterval(go); 
   speed = speedset.property("value")*1000;
   if (speed == 0) {
-    clear()
+    clearInterval(go)
     speed = 0
     spedometer()
   }
@@ -442,14 +442,10 @@ speedset.on("change", function() {
   }
 })
 
-function clear() {
-    clearInterval(go)
-}
-
 var pausebtn = d3.select("#pause");
 pausebtn.on("click", function() {
   console.log('Pause Working')
-  clear()
+  clearInterval(go)
   speed = 0
   spedometer() 
 })
@@ -458,7 +454,7 @@ var speedout = d3.select("#speed")
 
 var playbtn = d3.select("#play");
 playbtn.on("click", function() {
-  clear()
+  clearInterval(go)
   speed = 1000; 
   spedometer()
   interval()
@@ -466,17 +462,15 @@ playbtn.on("click", function() {
 
 var fwdbtn = d3.select("#fwd");
 fwdbtn.on("click", function() {
-  clear(); 
+  clearInterval(go); 
   speed = (speed * .5);
   
   if (speed == 0) {
-    clear()
+    clearInterval(go)
     speed = 0
   }
   else {
-    var cap= Math.max(100, speed)
-
-    speed = cap
+    speed = Math.min(60000, speed)
     interval()
   }
   spedometer() 
@@ -485,16 +479,15 @@ fwdbtn.on("click", function() {
 
 var slowbtn = d3.select("#slow");
 slowbtn.on("click", function() {
-  clear(); 
+  clearInterval(go); 
   speed = (speed * 2);
  
   if (speed == 0) {
-    clear()
+    clearInterval(go)
     speed = 0
   }
   else {
-    var cap= Math.min(60000, speed)
-    speed = cap
+    speed = Math.max(100, speed)
     interval()
   }
   spedometer() 
