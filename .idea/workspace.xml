@@ -2,78 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2d2b47d-9b32-4a94-b664-22810f2b779e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/auth/login_1_old.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/auth/login_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/auth/login_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/shared/misc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/shared/misc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/charts/chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/charts/chartjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/forms/basic_elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/forms/basic_elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/icons/font-awesome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/icons/font-awesome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/blank-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/samples/blank-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/samples/error-404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/samples/error-500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/samples/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/tables/basic-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/tables/basic-table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/ui-features/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/ui-features/buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/ui-features/dropdowns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/ui-features/dropdowns.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/ui-features/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo_1/pages/ui-features/typography.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/partials/purchase-banner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DJIA 2018 daily data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Raw/DJIA 2018 daily data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/.ipynb_checkpoints/CleanConat-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/.ipynb_checkpoints/binary_cnn-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/.ipynb_checkpoints/create_series-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/.ipynb_checkpoints/model_neural-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/CleanConat.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Jupyter Notebooks/CleanConat.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EUFN 2018 daily data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Raw/EUFN 2018 daily data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JJREE_NYT_API1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Jupyter Notebooks/JJREE_NYT_API1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_cnn v2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_cnn v2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_cnn v3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_cnn v3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_cnn.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_combined v3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_combined v3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_combined.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_combined.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_combined.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_combined.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_rfc.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_rfc.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_svm.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_svm.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/create_series.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/create_series.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/create_series_with_fininfo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/create_series_with_fininfo.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/fininfo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/fininfo.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/multi_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/multi_cnn.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/multi_kmeans.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/multi_kmeans.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_Initial/usd_eur_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/usd_eur_2018.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_v2/create_series_with_fininfo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_v2/create_series_with_fininfo.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_v2/fininfo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_v2/fininfo.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_v2/ma.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_v2/ma.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models_v2/usd_eur_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_v2/usd_eur_2018.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monthly Interest/FRB_H15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Monthly Interest/FRB_H15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monthly Interest/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Monthly Interest/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monthly Interest/monthly_interest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Monthly Interest/monthly_interest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monthly Interest/monthly_interest.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Monthly Interest/monthly_interest.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design files/PSD/StarAdmin-Free-Bootstrap-Admin-Template.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/design files/Sketch/StarAdmin-Free-Bootstrap-Admin-Template.sketch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentiment_analysis/JJREE_NYT_API1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/JJREE_NYT_API1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2018fed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2018fed.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2018politics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2018politics.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2019fed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2019fed.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2019finance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2019finance.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2019politics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2019politics.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis2018finance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis2018finance.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/ECB_Interest Rates.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Raw/ECB_Interest Rates.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/FRB_Interest Rates.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Raw/FRB_Interest Rates.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask/Data/ECB_Interest Rates.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask/Data/FRB_Interest Rates.csv" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/demo_1/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="841" column="39" selection-start-line="841" selection-start-column="39" selection-end-line="841" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/demo_1/pages/samples/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1036" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/demo_1/pages/samples/blank-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="274" column="39" selection-start-line="274" selection-start-column="39" selection-end-line="274" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/demo_1/pages/icons/font-awesome.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="1100" column="62" lean-forward="true" selection-start-line="1100" selection-start-column="62" selection-end-line="1100" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/demo_1/pages/samples/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-441">
-              <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -84,168 +64,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/assets/js/shared/misc.js" />
-        <option value="$PROJECT_DIR$/src/demo_1/index.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/ui-features/typography.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/ui-features/dropdowns.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/ui-features/buttons.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/tables/basic-table.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/samples/login.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/samples/error-500.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/samples/error-404.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/samples/blank-page.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/icons/font-awesome.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/forms/basic_elements.html" />
-        <option value="$PROJECT_DIR$/src/demo_1/pages/charts/chartjs.html" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="1030" />
-  </component>
+  <component name="ProjectId" id="1Tt3gWuie9H6f8rqDDU7p1hPdJc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vendors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vendors" type="462c0819:PsiDirectoryNode" />
-              <item name="tinymce" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_1" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_1" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="charts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_1" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_1" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_1" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="samples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_1" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="tables" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_1" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="ui-features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StarAdmin-Free-Bootstrap-Admin-Template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_1" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\Project-3\Data\Raw" />
+      <recent name="C:\GitHub\Project-3\Analysis" />
+      <recent name="C:\GitHub\Project-3\Analysis\Jupyter Notebooks" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitHub\StarAdmin-Free-Bootstrap-Admin-Template\src\assets\images\auth" />
     </key>
@@ -274,185 +107,22 @@
       <updated>1573604733788</updated>
       <workItem from="1573604736003" duration="266000" />
       <workItem from="1573605042948" duration="5329000" />
+      <workItem from="1574265678481" duration="1554000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5595000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Gulp" order="2" side_tool="true" />
-      <window_info id="npm" order="3" side_tool="true" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3297587" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3297587" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/demo_1/partials/_sidebar.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/partials/_navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-102" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/partials/purchase-banner.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/partials/_footer.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/js/shared/misc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/ui-features/typography.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="614" column="39" selection-start-line="614" selection-start-column="39" selection-end-line="614" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/ui-features/dropdowns.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="780" column="39" selection-start-line="780" selection-start-column="39" selection-end-line="780" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/ui-features/buttons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="706" column="39" selection-start-line="706" selection-start-column="39" selection-end-line="706" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/tables/basic-table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="723" column="39" selection-start-line="723" selection-start-column="39" selection-end-line="723" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="841" column="39" selection-start-line="841" selection-start-column="39" selection-end-line="841" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/samples/error-500.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="42" column="92" selection-start-line="42" selection-start-column="92" selection-end-line="42" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/vendors/tinymce/tinymce.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/charts/chartjs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="426" column="39" selection-start-line="426" selection-start-column="39" selection-end-line="426" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/forms/basic_elements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="761" column="39" selection-start-line="761" selection-start-column="39" selection-end-line="761" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/icons/font-awesome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="1100" column="62" lean-forward="true" selection-start-line="1100" selection-start-column="62" selection-end-line="1100" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/samples/error-404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="42" column="92" selection-start-line="42" selection-start-column="92" selection-end-line="42" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/samples/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1036" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/samples/blank-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="274" column="39" selection-start-line="274" selection-start-column="39" selection-end-line="274" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/images/auth/login_1_old.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo_1/pages/samples/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441">
-          <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
