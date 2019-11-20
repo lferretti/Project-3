@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- ADDED 4 -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
       <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- ADDED 4 End-->
       
 
       <!-- <script src="static/assets/js/charts/app.js"></script> -->
@@ -291,10 +293,11 @@
         GRAPHS
         -->
         
+        <!-- ADDED 3 -->
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="row">
-              <div class="col-md-12 grid-margin">
+              <div class="card col-lg-12 mx-auto grid-margin">
                 <div class="card">
                   <div class="p-4 border-bottom bg-light">
                     <h4 class="card-title mb-0">Forex EUR-USD Live Feed</h4>
@@ -338,54 +341,64 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="p-4 border-bottom bg-light">
-                    <h4 class="card-title mb-0">Line Chart</h4>
+              <!-- ADDED 3 END -->
+<!-- ADDED 2 -->
+              <div class="card col-lg-4 mx-auto grid-margin">
+                  <div class="border-bottom bg-light">
+                    <span>
+                    <h4 class="card-title p-4 mb-auto">Recent Performance</h4>
+                    <div class='p-2 container row mx-auto'>
+                    <text class='col-lg-6 col-5 mx-auto' style='font-size: 12px;' id='day'>Date: N/A</text>
+                    <text class='col-lg-5 col-5 mx-auto' style='font-size: 12px;' id='time'>Time: N/A</text>
                   </div>
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center pb-4">
-                      <h4 class="card-title mb-0">Sales Performance</h4>
-                      <div id="line-traffic-legend"></div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <h2 class="mb-0 font-weight-medium">$5,341</h2>
-                        <p class="mb-5 text-muted">Sales</p>
-                      </div>
-                      <div class="col-md-3">
-                        <h2 class="mb-0 font-weight-medium">$1,334</h2>
-                        <p class="mb-5 text-muted">Profits</p>
-                      </div>
-                    </div>
-                    <canvas id="lineChart" style="height:250px"></canvas>
+                  </span>
                   </div>
-                </div>
-              </div>
-              <div class="col-lg-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="p-4 border-bottom bg-light">
-                    <h4 class="card-title mb-0">Area Chart</h4>
-                  </div>
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center pb-4">
-                      <h4 class="card-title mb-0">Site Traffic</h4>
-                      <div id="area-traffic-legend"></div>
+                  <div class="p-1 card-body container mx-auto">
+                    <br>
+                    <div class='row'>
+                      <text style='font-size: 14px;' class='col-lg-6 col-md-3 mx-auto'>Model's Action:</text>
+                      <text class='col-lg-4 col-md-3 mx-auto' style='margin-bottom: 20px; text-align: right; font-size: 12px;' id='action'>Please Wait</text>
                     </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <h2 class="mb-0 font-weight-medium">3,245</h2>
-                        <p class="mb-5 text-muted">Users</p>
+                      <br>
+                    
+                    <div class='row'>
+                        <text style='font-size: 14px;' class='col-lg-6 col-md-3 mx-auto'>Movement:</text>
+                        <text class='col-lg-4 col-md-3  mx-auto' style='margin-bottom: 20px; text-align: right; font-size: 12px;' id='pip'>Please Wait</text>
+                     
                       </div>
-                      <div class="col-md-4">
-                        <h2 class="mb-0 font-weight-medium">12.54%</h2>
-                        <p class="mb-5 text-muted">Bounce Rate</p>
+                      <br>
+                    <div class='row'> 
+                        <text style='font-size: 14px;' class='col-lg-6 col-md-3 mx-auto'>Monetary Change:</text>
+                        <text class='col-lg-4 col-md-3 mx-auto' style='margin-bottom: 20px; text-align: right;font-size: 12px;' id='money'>Please Wait</text>
                       </div>
-                    </div>
-                    <canvas id="areaChart" style="height:250px"></canvas>
+                      <br>
                   </div>
                 </div>
-              </div>
+                <div class="card col-lg-7 mx-auto grid-margin">
+                  <div class="p-4 border-bottom bg-light">
+                    <h4 class="card-title mb-0">Historical Reports</h4>
+                  </div>
+                  <div class="card-body table-responsive">
+                      <table id="output" style='text-align: center; overflow: scroll;' class="dataframe table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Date</th>
+                            <th>Hour</th>
+                            <th>Minute</th>
+                            <th>Action</th>
+                            <th>Movement</th>
+                            <th>P/L</th>
+                            <th>Balance</th>
+                          </tr>
+                        </thead>
+                        <tbody id='outbody'>
+
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+                <!-- ADDED 2 END -->
+              <!-- </div> -->
             </div>
           </div>
           <!-- content-wrapper ends -->
@@ -407,7 +420,13 @@
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="static/assets/js/shared/chart.js"></script>
+    <!-- <script type="text/javascript" src="static/assets/js/charts/profit.js'"></script> -->
+
+    
+    <!-- ADDED 1 -->
     <script src="{{ url_for('static', filename='assets/js/charts/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/charts/profit.js') }}"></script>
+    <!-- ADDED 1 END -->
 
     <!-- End custom js for this page-->
   </body>
