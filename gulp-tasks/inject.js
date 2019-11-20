@@ -71,7 +71,7 @@ gulp.task('replacePath', function () {
         .pipe(replace('src="assets/images/', 'src="../assets/images/'))
         .pipe(replace('href="pages/', 'href="pages/'))
         .pipe(replace('href="docs/', 'href="../docs/'))
-        .pipe(replace('href="demo_1/', 'href="../demo_1/'))
+        .pipe(replace('href="app/', 'href="../app/'))
         .pipe(replace('href="index.html"', 'href="index.html"'))
         .pipe(gulp.dest('.'));
     gulp.src('src/*/pages/*.html', {
@@ -81,7 +81,7 @@ gulp.task('replacePath', function () {
         .pipe(replace('href="pages/', 'href="../pages/'))
         .pipe(replace('href="pages/', 'href="../../pages/'))
         .pipe(replace('href="docs/', 'href="../../docs/'))
-        .pipe(replace('href="demo_1/', 'href="../../demo_1/'))
+        .pipe(replace('href="app/', 'href="../../app/'))
         .pipe(replace('href="index.html"', 'href="../index.html"'))
         .pipe(gulp.dest('.'));
     gulp.src('src/*/pages/*/*.html', {
@@ -90,7 +90,7 @@ gulp.task('replacePath', function () {
         .pipe(replace('src="assets/images/', 'src="../../../assets/images/'))
         .pipe(replace('href="pages/', 'href="../../pages/'))
         .pipe(replace('href="docs/', 'href="../../../docs/'))
-        .pipe(replace('href="demo_1/', 'href="../../../demo_1/'))
+        .pipe(replace('href="app/', 'href="../../../app/'))
         .pipe(replace('href="index.html"', 'href="../../index.html"'))
         .pipe(gulp.dest('.'));
 });

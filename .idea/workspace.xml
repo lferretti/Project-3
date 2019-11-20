@@ -2,52 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2d2b47d-9b32-4a94-b664-22810f2b779e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/forex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DJIA 2018 daily data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Raw/DJIA 2018 daily data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/.ipynb_checkpoints/CleanConat-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/.ipynb_checkpoints/binary_cnn-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/.ipynb_checkpoints/create_series-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/.ipynb_checkpoints/model_neural-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/2019 Forex Data/CleanConat.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Jupyter Notebooks/CleanConat.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EUFN 2018 daily data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Raw/EUFN 2018 daily data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JJREE_NYT_API1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Jupyter Notebooks/JJREE_NYT_API1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_cnn v2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_cnn v2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_cnn v3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_cnn v3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_cnn.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_combined v3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_combined v3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_combined.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_combined.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_combined.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_combined.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_rfc.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_rfc.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/binary_svm.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/binary_svm.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/create_series.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/create_series.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/create_series_with_fininfo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/create_series_with_fininfo.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/fininfo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/fininfo.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/multi_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/multi_cnn.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/multi_kmeans.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/multi_kmeans.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_Initial/usd_eur_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_Initial/usd_eur_2018.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_v2/create_series_with_fininfo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_v2/create_series_with_fininfo.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_v2/fininfo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_v2/fininfo.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_v2/ma.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_v2/ma.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models_v2/usd_eur_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Models_v2/usd_eur_2018.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monthly Interest/FRB_H15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Monthly Interest/FRB_H15.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monthly Interest/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Monthly Interest/data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monthly Interest/monthly_interest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Monthly Interest/monthly_interest.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monthly Interest/monthly_interest.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/Monthly Interest/monthly_interest.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design files/PSD/StarAdmin-Free-Bootstrap-Admin-Template.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design files/Sketch/StarAdmin-Free-Bootstrap-Admin-Template.sketch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentiment_analysis/JJREE_NYT_API1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/JJREE_NYT_API1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2018fed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2018fed.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2018politics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2018politics.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2019fed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2019fed.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2019finance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2019finance.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis-2019politics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis-2019politics.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentiment_analysis/sentiment_analysis2018finance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis/sentiment_analysis/sentiment_analysis2018finance.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ECB_Interest Rates.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Raw/ECB_Interest Rates.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/FRB_Interest Rates.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Raw/FRB_Interest Rates.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask/Data/ECB_Interest Rates.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask/Data/FRB_Interest Rates.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp-tasks/inject.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulp-tasks/inject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/demo_1/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/forex_app/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/demo_1/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/forex_app/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/faces/face8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/faces/face8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/demo_1/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/forex_app/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_dashboard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_layouts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_layouts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_misc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_misc.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/charts/chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/charts/chartjs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/forms/basic_elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/icons/font-awesome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/icons/font-awesome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/blank-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/blank-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/error-404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/error-500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/tables/basic-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tables/basic-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/ui-features/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/ui-features/buttons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/ui-features/dropdowns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/ui-features/dropdowns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/ui-features/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/ui-features/typography.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/partials/_footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partials/_footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partials/_navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo_1/partials/_sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partials/_sidebar.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,19 +57,21 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images/faces" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitHub\Project-3\src\assets\images\faces" />
+      <recent name="D:\GitHub\StarAdmin-Free-Bootstrap-Admin-Template\src\assets\images\auth" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\GitHub\Project-3\Data\Raw" />
       <recent name="C:\GitHub\Project-3\Analysis" />
       <recent name="C:\GitHub\Project-3\Analysis\Jupyter Notebooks" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\StarAdmin-Free-Bootstrap-Admin-Template\src\assets\images\auth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -95,6 +86,30 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="forex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Live Page" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Live Page/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -108,6 +123,10 @@
       <workItem from="1573604736003" duration="266000" />
       <workItem from="1573605042948" duration="5329000" />
       <workItem from="1574265678481" duration="1554000" />
+      <workItem from="1574268453631" duration="2046000" />
+      <workItem from="1574271305063" duration="938000" />
+      <workItem from="1574282494533" duration="2031000" />
+      <workItem from="1574284833711" duration="7508000" />
     </task>
     <servers />
   </component>
@@ -119,7 +138,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
