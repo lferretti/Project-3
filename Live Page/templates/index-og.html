@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Financial Plot</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+    crossorigin="anonymous"></script>
+
+  <!-- Prevent favicon issue -->
+  <link rel="icon" href="data:,">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light shrinkray">
+  <!-- <div class='row'> -->
+    <form>
+    <text>Enter a Date
+    <input id="date" type="text" style='text-align: center' value="1/01/2019" size='7'>
+    </text>
+    <text>Enter an Hour
+    <input id="hour" type="text" style='text-align: center' value="17" size='3'>
+    </text>
+    
+    <button id="filter" type="button" class="btn-default m-auto" style="color: black; border: thin">
+        Filter
+        </button>
+        
+      </form>
+
+      <form class="ml-lg-auto ml-md-0">
+    <button id="pause" title='Pause' type="button" class="btn-default m-auto" style="color: black; border: thin">
+      <i class="glyphicon glyphicon-pause"></i>
+      </button>
+    <button id="play" title='Play/Resume' type="button" class="btn-default" style="color: black; border: thin">
+      <i class="glyphicon glyphicon-play"></i>
+      </button>
+    <button id="slow" title='Slower' type="button" class="btn-default" style="color: black; border: thin">
+      <i class="glyphicon glyphicon-step-forward"></i>
+      </button>
+    <button id="fwd" title='Faster' type="button" class="btn-default" style="color: black; border: thin">
+      <i class="glyphicon glyphicon-fast-forward"></i>
+      </button>
+
+
+    <text>Speed <input id="speed" type="text" value="1" size='3' style="text-align: center;"> sec. </text>
+    </form>
+
+
+  </nav>
+
+  <div class='container'>
+    <div class='col-lg-12'>
+    <div id="plot" style="margin-bottom: 0;"></div>
+    
+    <div id="residual" style="margin-top: 0;"></div>
+  </div>
+
+  </div>
+    <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
+     <script src="{{ url_for('static', filename='assets/js/charts/app.js') }}"></script>
+</body>
+</html>
