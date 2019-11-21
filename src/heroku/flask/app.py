@@ -14,6 +14,18 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/interactive")
+def interactive():
+    return render_template("interactive.html")
+
+@app.route("/summary")
+def summary():
+    return render_template("Summary.html")
+
+# @app.route("/data") # Necessary for the javascript, needs a data path to pull data from the csv!
+# def dataset():
+#     results = 
+
 # For the Machine Learning path
 # @app.route("/ml")
 # def ml():
