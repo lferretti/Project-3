@@ -124,6 +124,7 @@ function makedata() {
   pts = [], avg = [], y0 = [], y1 = [], x0 = [], x1 = [], color = []
   dinero = 10000
   signif = false
+  movemoveit = false
   trend = 0
   wait = Array(10).fill(0)
   avg = []
@@ -396,6 +397,7 @@ function drawbar() {
 
 // var x = 0
 var go;
+var movemoveit = false;
 // var speed = 60000;
 var speed = 1000;
 var once = 0
@@ -429,9 +431,6 @@ function interval() {
 //Make sure interval can only be started once, prevents errors
 if (once == 0) {
   go = setInterval(() => {
-
-    // console.log(e)
-
     once = 1;
 
     //Extend traces of line and bar grpah by attaching new data point to ends of graphs
@@ -448,12 +447,22 @@ if (once == 0) {
       y: [[changling[1]]]}, [1]);
 
     //Shift the taces by removing first data point when e is greater than the extent
-      xrng_adj = xrange-9
+      xrng_adj = xrange - 9
     
     //Call the shape making function before relayout, updates existing shapes and finds new ones
-      workshop()
-    
+     
+    workshop()
+
+    if (movemoveit == false) {
+      Plotly.relayout(lineID, {
+        shapes: shapes,
+      })
+    }
+
       if (e > xrng_adj) {
+      
+        movemoveit = true
+
       linedata[0].y.shift();
       bardata[0].y.shift();
       bardata[1].y.shift();
@@ -562,7 +571,7 @@ fwdbtn.on("click", function() {
   }
 
   else {
-    var cap= Math.max(500, speed)
+    var cap= Math.max(250, speed)
     speed = cap
     interval()
   }
@@ -596,7 +605,7 @@ slowbtn.on("click", function() {
 // SVG Trace ###
 // SVG Trace ###
 
-var pts = [], avg = [], y0 = [], y1 = [], x0 = [], x1 = [], color = [], signif, trend, len, wait, reco, output, pipchange
+var pts = [], avg = [], y0 = [], y1 = [], x0 = [], x1 = [], color = [], signif, trend, wait, reco, output, pipchange
 signif = false
 wait = Array(10).fill(0)
 
@@ -638,13 +647,12 @@ function workshop() {
   bors()
 }
 
-//take the sum of the 15 most recent data points, then average them. Put average in array of 15 averages
 //If average of array of averages is positive or negative and greater than limit, then moving trend is found, significant is true.
 //Color shape accordingly, green and red and push x and y variables
 function bors() {
 
   var endval, startval;
-  endval = actpts[len]
+  endval = actpts[19]
   startval = actpts[0]
 
   wait.shift()
@@ -663,18 +671,21 @@ function bors() {
   }
 
   if (signif == true) {
+    if (movemoveit == false) {
+      end = end - 1
+      start = start -1
+    }
 
     wait.push(1)
     profit.push(globaldata[e-1]['profit'])
     mvmt.push(globaldata[e-1]['sum'])
     x0.push(start)
-    y1.push(startval)
+    y0.push(startval)
     x1.push(end)
-    y0.push(endval)
-
+    y1.push(endval)
+    console.log(x1, x0, y1, y0)
   }
   craft()
-
 }
 
 //Make the paper and line shapes
@@ -690,7 +701,6 @@ function craft() {
     x1.shift()
     y1.shift()
     color.shift()
-
   }
 
   //make shapes with every trend that is found, due to wait timer on two can found one page at a time
@@ -713,23 +723,25 @@ function craft() {
     shapes.push({
       type: 'line',
       line: {
-        color: 'black',
+        color: '#646464',
         dash: 'dashdot',
         width: 2,
       },
       x0: x0[i],
-      y0: y0[i],
+      y0: y1[i],
       x1: x1[i] + 10,
-      y1: y1[i],
+      y1: y0[i],
     })
+
 
     //every foor loop iteration subtract one from the x and y variables to make shapes move accorss line graph
     adjx0.push(x0[i] - 1)
-    adjy0.push(y0[i] - 1)
+      // adjy0.push(y0[i] - 1)
     adjx1.push(x1[i] - 1)
-    adjy1.push(y1[i] - 1)
+      // adjy1.push(y1[i] - 1)
   }
-
-  x0 = adjx0
-  x1 = adjx1
+  if (movemoveit == true) {
+    x0 = adjx0
+    x1 = adjx1
+  }
 }
