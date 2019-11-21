@@ -299,26 +299,25 @@
             <div class="row">
               <div class="card col-lg-12 mx-auto grid-margin">
                 <div class="card">
-                  <div class="p-4 border-bottom bg-light">
-                    <h4 class="card-title mb-0">Forex EUR-USD Live Feed</h4>
+                  <div class="border-bottom bg-light">
+                    <h4 class="card-title mb-0" style="padding-top: 2.5%; padding-left: 5%; padding-right: 5; padding-bottom: 1.5%;">Forex EUR-USD Live Feed</h4>
                     <br>
-                    <div class="container">
-                    <span class='col-lg-6 ml-0'>
+                    <div class="container" style="padding-left: 5%; padding-right: 5; padding-bottom: 1%;">
+                    <div class='col-md-6 mx-auto'>
                         <text>Enter: Date - 
-                        <input id="date" type="text" style='text-align: center' style="font-size: 10px;" value="1/01/2019" size='8'>
+                        <input id="date" type="text" style='text-align: center' style="font-size: 10px;" value="12/02/2018" size='8'>
                         </text>
                         <text>Hour - 
                         <input id="hour" type="number" min="0" max="23" style='text-align: center; width: 45px;' value="0" onkeydown='return false'>
                         </text>
                         
                         <button id="filter" type="button" class="btn-default m-auto" style="color: black; border: thin">
-                            Filter
-                            </button>
-                      </span>
-                            
+                          Filter
+                        </button>
+                      </div>
                     
-                      <span class='mr-0 col-lg-6'>
-                        <button id="pause" title='Pause' type="button" class="btn-default m-auto" style="color: black; border: thin">
+                      <div class='col-md-6 mx-auto mr-0'>
+                        <button id="pause" title='Pause' type="button" class="btn-default" style="color: black; border: thin">
                           <i class="glyphicon glyphicon-pause"></i>
                           </button>
                         <button id="play" title='Play/Resume' type="button" class="btn-default" style="color: black; border: thin">
@@ -331,10 +330,10 @@
                           <i class="glyphicon glyphicon-fast-forward"></i>
                           </button>
                         <text>Speed <input id="speed" type="text" value="1" size='3' style="text-align: center;"> sec. </text>
-                      </span>
+                        </div>
                     </div>
                   </div>
-                  <div class="card-body">
+                  <div class="card-body mt-0">
                       <div id="plot" style="margin-bottom: 0;"></div>
     
                       <div id="residual" style="margin-top: 0;"></div>

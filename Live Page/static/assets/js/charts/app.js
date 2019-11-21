@@ -1,15 +1,17 @@
 // Initialize the data
 getdata();
 
-var data, globaldata;
+var data, globaldata, unfiltered;
 var minute = [], actual = [], poschange = [], negchange = []
 //Use gogo to turn interval off/on at need. Makes basic changes e.g. HTML easier to process
 var gogo = true
 // var gogo = false
 var max = 0
 //Stop e at max - 10 because it allows a 10 tick gap, allowing forecast trend lines to be more effective visually
-var e = Math.max(0, (max - 10));
-xrange = 40
+var e = 0
+var xrange = 50
+var xmin = xrange - 10
+
 var s = 0;
 var lineID = 'plot';
 var barID = 'residual';
@@ -45,10 +47,15 @@ function filterer() {
 
   // console.log(date_in, hour_in)
 
-  filtered = globaldata.filter(x => new Date(x['date']) >= date_in)
+  filtered = unfiltered.filter(x => new Date(x['date']) >= date_in)
 
-  var date_chk = new Date(filtered[0]['date'])
-  var hour_chk = filtered[0]['hour']
+  try {
+    var date_chk = new Date(filtered[0]['date'])
+    var hour_chk = filtered[0]['hour']
+  }
+  catch {
+    return;
+  }
 
   //If date does not contain hour then go to select first associated with said date.
   if (String(date_chk) === String(date_in) && hour_chk != hour_in && hour_chk > hour_in) {
@@ -70,8 +77,8 @@ function OntheHour() {
   var ind = filtered.findIndex(ClockStrikes)
   var new_data = filtered.slice(ind);
 
-
   globaldata = new_data;
+  // console.log(new_data)
   makedata();
 }
 
@@ -87,11 +94,10 @@ function getdata() {
     data = []
     // xx.slice(s, e)
     globaldata = xx;
-
-  actual = [], minute = []
-    
-  makedata();
-
+    unfiltered = xx;
+    actual = [], minute = []
+  
+    makedata();
 })
 }
 
@@ -119,13 +125,14 @@ function makedata() {
   dinero = 10000
   signif = false
   trend = 0
-  wait = 0
+  wait = Array(10).fill(0)
   avg = []
-  actual = [], minute = [], poschange = [], negchange = [], shapes = []
+  e2 = xrange
+  actual = [], minute = [], poschange = [], negchange = [], shapes = [], shapeact = []
   max = 0
-  pipchange = null, reco = null, 
+  pipchange = null, reco = null, profit = [], mvmt = []
   
-  e = Math.max(0, (max - 10));
+  e = 0
   s = 0
 
     data.forEach(zz => {
@@ -172,22 +179,23 @@ function clock() {
 // Data Call Iterators
 // Data Call Iterators
 
-var ydata, yneg, ypos, runitback;
-var shapeact = [], shapechange = [];
-runitback = false
+var ydata, yneg, ypos, byorcell;
+var shapeact = [], shapechange = [], profit = [], mvmt = [];
 
 //Pass in new ytrace variables for line graph
 function yact() {
 
-  e += 1;
-  s += 1;
-
   ydata = globaldata[e]['actual']
+  byorcell = Number(globaldata[e]['buy_sell'])
+
   shapeact.push(globaldata[e]['actual'])
 
-  if (shapeact.length > 30) {
+  if (shapeact.length > xmin) {
     shapeact.shift()
   }
+
+  e += 1;
+  s += 1;
 
   return ydata;
 }
@@ -196,11 +204,6 @@ function yact() {
 function ychange() {
 
   var delta = globaldata[e]['change']
-  shapechange.push(globaldata[e]['change'])
-
-  if (shapechange.length > 30) {
-    shapechange.shift()
-  }
   
   if (delta < 0) {
     yneg = delta
@@ -228,13 +231,15 @@ function outdata() {
   return exp;
 }
 
-//New minutes and hours for graph axes to be updated ob
+//New minutes and hours for graph axes to be updated
 function newdata() {
 
   var date, hour
 
   date = globaldata[e]['date']
   hour = globaldata[e]['hour']
+
+  // console.log(date, hour)
 
   return [date, hour];
 }
@@ -246,7 +251,6 @@ function mini() {
 
   //If e2 errors that means, the data has reached it's conclusion. at which point the models will reset and start again.
   try {
-    e2= e2 + 1
     minim = globaldata[e2]['minute'] 
   }
   catch {
@@ -264,6 +268,7 @@ function mini() {
   }
 
   minute.shift()
+  e2= e2 + 1
   // console.log(minute)
   return minute;
 }
@@ -424,6 +429,8 @@ function interval() {
 //Make sure interval can only be started once, prevents errors
 if (once == 0) {
   go = setInterval(() => {
+
+    // console.log(e)
 
     once = 1;
 
@@ -589,97 +596,82 @@ slowbtn.on("click", function() {
 // SVG Trace ###
 // SVG Trace ###
 
-var pts = [], avg = [], y0 = [], y1 = [], x0 = [], x1 = [], color = [], profit, signif, trend, len, wait, ten, pipchange, reco, output
+var pts = [], avg = [], y0 = [], y1 = [], x0 = [], x1 = [], color = [], signif, trend, len, wait, reco, output, pipchange
 signif = false
-wait = 0
-// ten = 10
+wait = Array(10).fill(0)
 
 //initate shape making functionality
 function workshop() {
 
-  end = shapechange.length 
-  start = end - 15
-  pts = shapechange.slice(start, end)
+  end = shapeact.length
+  start = end - 20
+  // pts = shapechange.slice(start, end)
   actpts = shapeact.slice(start, end)
 
   //if shape has been added recently wait 25 iterations before finding a new one. prevent over crowding and counteractive shape reports
-  if (wait == 0 && e >= 15) {
-    sum()
-  }
-  else if (wait > 0) {
-    wait = Math.max(0, wait - 1)
-    
     //if at 10 point after the shape was determined (end of linear forecast) then output live data results to determine if profit or loss occured.
     //exports data to profit.js
-    if (wait == 15) {
+  if (wait[0] == 1) {
 
-      output = outdata()
-      pipchange =  Number(actpts[13] - actpts[3])
+    var arrayout1 = []
+    arrayout2 = outdata()
+    pipchange = mvmt[0]
+    gold = profit[0]
 
-      if (color[0] == 'green') {
-            reco = "Buy"
+    if (color[0] == 'green') {
+          reco = "Buy"
       }
-      else {
-            reco = "Sell"
+    else if (color[0] == 'red') {
+          reco = "Sell"
       }
 
-      console.log(pipchange, actpts[13], actpts[3])
-    }
+    arrayout1 = [pipchange, reco, gold]
+    output = arrayout1.concat(arrayout2)
+
+    console.log(output)
+
+    newresult()   
+    
+    mvmt.shift()
+    profit.shift()
   }
-  craft()
+  bors()
 }
 
 //take the sum of the 15 most recent data points, then average them. Put average in array of 15 averages
-function sum() {
-
-  // console.log('pts', pts)
-  len = pts.length - 1
-
-  avg.push(pts.reduce((first, second) => first + second) / pts.length)
-  // console.log("AVG", avg)
-
-  if (avg.length > 15) {
-    avg.shift()
-    avgcalc()
-    // console.log("AVG", avg)
-  }
-
-}
-
 //If average of array of averages is positive or negative and greater than limit, then moving trend is found, significant is true.
 //Color shape accordingly, green and red and push x and y variables
-function avgcalc() {
+function bors() {
 
   var endval, startval;
   endval = actpts[len]
   startval = actpts[0]
-  
-  trend = avg.reduce((first, second) => first + second) / avg.length
 
-  var lim = .000005
-  if (trend > lim || trend < (lim*-1)) {
-    signif = true
+  wait.shift()
 
-    if (endval > startval) {
+  if (byorcell == 1) {
       color.push('green')
+      signif = true
     }
-    else {
+  else if (byorcell == -1) {
       color.push('red')
-      // console.log(endval, startval, actpts)
+      signif = true
     }
-
-  }
   else {
     signif = false
+    wait.push(0)
   }
 
   if (signif == true) {
+
+    wait.push(1)
+    profit.push(globaldata[e-1]['profit'])
+    mvmt.push(globaldata[e-1]['sum'])
     x0.push(start)
-    y0.push(startval)
+    y1.push(startval)
     x1.push(end)
-    y1.push(endval)
-    wait = 25;
-    console.log("Trend", trend, signif)
+    y0.push(endval)
+
   }
   craft()
 
@@ -692,11 +684,13 @@ function craft() {
   // console.log(x1[0])
   //If paper shape is now off page remove all variables associated with, deleting the shape
   if (x1[0] < 0) {
+
     x0.shift()
     y0.shift()
     x1.shift()
     y1.shift()
     color.shift()
+
   }
 
   //make shapes with every trend that is found, due to wait timer on two can found one page at a time
@@ -711,7 +705,7 @@ function craft() {
     x1: x1[i],
     y1: 1,
     fillcolor: color[i],
-    opacity: 0.2,
+    opacity: 0.1,
     line: {
         width: 0
     }
