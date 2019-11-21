@@ -17,7 +17,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-df_19 = pd.read_csv('data/EURUSD-2019ForexData.csv')
+df_19 = pd.read_csv('data/2018_12_forex_sel.csv')
 
 def livefeed():
     json_df = df_19.to_json(orient = 'records')
