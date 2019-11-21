@@ -18,12 +18,12 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/assets/images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700%7CSpace+Mono">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="static/assets/summary/css/bootstrap.css">
+    <link rel="stylesheet" href="static/assets/summary/css/fonts.css">
+    <link rel="stylesheet" href="static/assets/summary/css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
 	  
 	  
@@ -43,9 +43,9 @@
       <!-- partial:../../partials/_navbar.html -->
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="background-color: black">
-          <a class="navbar-brand brand-logo" href="../..//">
+          <a class="navbar-brand brand-logo" href="/">
             <img src="static/assets/images/logo2.png" alt="logo" /> </a>
-          <a class="navbar-brand brand-logo-mini" href="../..//">
+          <a class="navbar-brand brand-logo-mini" href="/">
             <img src="static/assets/images/logo-mini.svg" alt="logo" /> </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -118,8 +118,8 @@
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
                   <img class="img-md rounded-circle" src="static/assets/images/Devang.png" alt="Profile image">
-                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-                  <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
+                  <p class="mb-1 mt-3 font-weight-semibold">Devang Ghandi</p>
+                  <p class="font-weight-light text-muted mb-0">DGhanOnVacation@AOL.com</p>
                 </div>
                 <a class="dropdown-item">My Profile <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
                 <a class="dropdown-item">Messages<i class="dropdown-item-icon ti-comment-alt"></i></a>
@@ -135,9 +135,11 @@
         </div>
       </nav>
       <!-- partial -->
+
       <div class="container-fluid page-body-wrapper">
-        <!-- partial:../../partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: black">
           <ul class="nav" style="background-color: black">
             <li class="nav-item nav-profile">
               <a href="#" class="nav-link">
@@ -153,37 +155,24 @@
             </li>
             <li class="nav-item nav-category">Main Menu</li>
             <li class="nav-item">
-              <a class="nav-link" href="../..//">
+              <a class="nav-link" href="#">
                 <i class="menu-icon typcn typcn-document-text"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <i class="menu-icon typcn typcn-coffee"></i>
-                <span class="menu-title">Press to make money</span>
-                <i class="menu-arrow"></i>
+<!--              <a class="nav-link" href="#"> &lt;!&ndash; TODO - change html page reference&ndash;&gt;-->
+                <a class="nav-link" href="/interactive">
+                <i class="menu-icon typcn typcn-bell"></i>
+                <span class="menu-title">Interactive</span>
               </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../../pages/ui-features/dropdowns.html">Dropdowns</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/samples/Summary.html">
-                <i class="menu-icon typcn typcn-shopping-bag"></i>
+              <a class="nav-link" href="/summary"> <!-- TODO - change html page reference-->
+                <i class="menu-icon typcn typcn-user-outline"></i>
                 <span class="menu-title">App Summary</span>
-              </a>
-            <li class="nav-item">
+            </a>
+            <!-- <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                 <i class="menu-icon typcn typcn-document-add"></i>
                 <span class="menu-title">User Pages</span>
@@ -208,14 +197,14 @@
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> -->
           </ul>
         </nav>
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper"> 
 			
-			<section class="section section-xl bg-image bg-image-dark text-center" style="background-image: url("static/assets/images/Machine_learning.jpg")">
+      <section class="section section-xl bg-image bg-image-dark text-center" style="background-image: url("static/assets/images/Machine_learning.jpg")">
         <div class="container">
           <h3>Launching Project LEDS in</h3>
           <div class="row justify-content-center">
@@ -315,8 +304,8 @@
 	  
 	  <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="static/assets/summary/js/core.min.js"></script>
+    <script src="static/assets/summary/js/script.js"></script>
 	  
 	  
   </body>
