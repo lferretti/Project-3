@@ -178,7 +178,7 @@
                     <div class="card-body">
                       <h4 class="card-title mb-0">Profits/Loss Over Time Overview</h4>
                       <div class="d-flex flex-column flex-lg-row">
-                        <p>Lorem ipsum is placeholder text commonly used</p>
+                        <p>Breakdown by minutes 0 through 59</p>
                         <ul class="nav nav-tabs sales-mini-tabs ml-lg-auto mb-4 mb-md-0" role="tablist">
                           <li class="nav-item">
                             <a class="nav-link active" id="sales-statistics_switch_1" data-toggle="tab" role="tab" aria-selected="true">1D</a>
@@ -199,8 +199,8 @@
                           <div class="wrapper">
                             <h5 class="mb-0">Total Profit</h5>
                             <div class="d-flex align-items-center">
-                              <h4 class="font-weight-semibold mb-0">$753,098</h4>
-                              <small class="ml-2 text-gray d-none d-lg-block"><b>10.5%</b> of 20,000 Total</small>
+                              <h4 class="font-weight-semibold mb-0">$568.50</h4>
+                              <small class="ml-2 text-gray d-none d-lg-block"><b>51.13% Profit</b></small>
                             </div>
                           </div>
                         </div>
@@ -243,21 +243,21 @@
                             <div class="col-md-6">
                               <div class="d-flex align-items-center pb-2">
                                 <div class="dot-indicator bg-danger mr-2"></div>
-                                <p class="mb-0">Total Transaction</p>
+                                <p class="mb-0">Total Loss</p>
                               </div>
-                              <h4 class="font-weight-semibold">7,590</h4>
+                              <h4 class="font-weight-semibold">$431.50</h4>
                               <div class="progress progress-md">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="78"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="78"></div>
                               </div>
                             </div>
                             <div class="col-md-6 mt-4 mt-md-0">
                               <div class="d-flex align-items-center pb-2">
                                 <div class="dot-indicator bg-success mr-2"></div>
-                                <p class="mb-0">Total Sold</p>
+                                <p class="mb-0">Total Profit</p>
                               </div>
-                              <h4 class="font-weight-semibold">$5,460</h4>
+                              <h4 class="font-weight-semibold">$568.50</h4>
                               <div class="progress progress-md">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="45"></div>
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 52%" aria-valuenow="52" aria-valuemin="0" aria-valuemax="45"></div>
                               </div>
                             </div>
                           </div>
@@ -271,14 +271,11 @@
                       <div class="card text-white">
                         <div class="card-body">
                           <div class="d-flex justify-content-between pb-2 align-items-center">
-                            <h2 class="font-weight-semibold mb-0">4,624</h2>
-                            <div class="icon-holder">
-                              <i class="mdi mdi-briefcase-outline"></i>
-                            </div>
+                            <h2 class="font-weight-semibold mb-0">7:00-7:59</h2>
                           </div>
                           <div class="d-flex justify-content-between">
-                            <h5 class="font-weight-semibold mb-0">Average Price Per Unit</h5>
-                            <p class="text-white mb-0">Since last month</p>
+                            <h5 class="font-weight-semibold mb-0">Most Profitable Hour</h5>
+                            <p class="text-white mb-0">$209.8</p>
                           </div>
                         </div>
                       </div>
@@ -289,11 +286,11 @@
                     <div class="col-md-12 grid-margin">
                       <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title mb-0">Monthly Units Overview</h4>
+                          <h4 class="card-title mb-0">Daily Overview</h4>
                           <div class="d-flex align-items-center justify-content-between w-100">
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="mb-0">Total profits and losses breakdown by day of the week for the given data.</p>
                             <div class="dropdown">
-                              <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dateSorter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">This Month</button>
+                              <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dateSorter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Days of Week</button>
                               <div class="dropdown-menu" aria-labelledby="dateSorter">
                                 <div class="dropdown-item" id="market-overview_1">Daily</div>
                                 <div class="dropdown-item" id="market-overview_2">Weekly</div>
@@ -302,9 +299,9 @@
                             </div>
                           </div>
                           <div class="d-flex align-items-end">
-                            <h3 class="mb-0 font-weight-semibold">$36,2531.00</h3>
+                            <h3 class="mb-0 font-weight-semibold">$568.50</h3>
                             <p class="mb-0 font-weight-medium mr-2 ml-2 mb-1">USD</p>
-                            <p class="mb-0 text-success font-weight-semibold mb-1">(+1.37%)</p>
+                            <p class="mb-0 text-success font-weight-semibold mb-1">(+1.13%)</p>
                           </div>
                           <canvas class="mt-4" height="100" id="market-overview-chart"></canvas>
                         </div>
@@ -324,46 +321,46 @@
                             <table class="table table-striped table-hover">
                               <thead>
                                 <tr>
-                                  <th>Invoice ID</th>
-                                  <th>Customer</th>
+                                  <th>Transaction ID</th>
+                                  <th>Currency Pair</th>
                                   <th>Status</th>
-                                  <th>Due Date</th>
+                                  <th>Date</th>
                                   <th>Amount</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td>INV-87239</td>
-                                  <td>Viola Ford</td>
-                                  <td>Paid</td>
+                                  <td>87239</td>
+                                  <td>EUR/USD</td>
+                                  <td>Completed</td>
                                   <td>20 Jan 2019</td>
                                   <td>$755</td>
                                 </tr>
                                 <tr>
-                                  <td>INV-87239</td>
-                                  <td>Dylan Waters</td>
-                                  <td>Unpaid</td>
+                                  <td>64537</td>
+                                  <td>EUR/USD</td>
+                                  <td>Completed</td>
                                   <td>23 Feb 2019</td>
                                   <td>$800</td>
                                 </tr>
                                 <tr>
-                                  <td>INV-87239</td>
-                                  <td>Louis Poole</td>
-                                  <td>Unpaid</td>
+                                  <td>14259</td>
+                                  <td>USD/EUR</td>
+                                  <td>Completed</td>
                                   <td>25 Mar 2019</td>
                                   <td>$463</td>
                                 </tr>
                                 <tr>
-                                  <td>INV-87239</td>
-                                  <td>Vera Howell</td>
-                                  <td>Paid</td>
+                                  <td>91935</td>
+                                  <td>USD/EUR</td>
+                                  <td>Completed</td>
                                   <td>27 Mar 2019</td>
                                   <td>$235</td>
                                 </tr>
                                 <tr>
-                                  <td>INV-87239</td>
-                                  <td>Allie Goodman</td>
-                                  <td>Unpaid</td>
+                                  <td>47238</td>
+                                  <td>EUR/USD</td>
+                                  <td>Completed</td>
                                   <td>1 Apr 2019</td>
                                   <td>$657</td>
                                 </tr>
@@ -386,28 +383,25 @@
                     <div class="col-md-12 grid-margin">
                       <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title mb-4">World sellings</h4>
+                          <h4 class="card-title mb-4">Top 3 Currency Pairs</h4>
                           <div id="dashboard-vmap" class="vector-map"></div>
                           <div class="wrapper">
                             <div class="d-flex w-100 pt-2 mt-4">
-                              <p class="mb-0 font-weight-semibold">California</p>
+                              <p class="mb-0 font-weight-semibold">EURUSD</p>
                               <div class="wrapper ml-auto d-flex align-items-center">
-                                <p class="font-weight-semibold mb-0">26,437</p>
-                                <p class="ml-1 mb-0">26%</p>
+                                <p class="ml-1 mb-0">24.0%</p>
                               </div>
                             </div>
                             <div class="d-flex w-100 pt-2">
-                              <p class="mb-0 font-weight-semibold">Washington</p>
+                              <p class="mb-0 font-weight-semibold">USDJPY</p>
                               <div class="wrapper ml-auto d-flex align-items-center">
-                                <p class="font-weight-semibold mb-0">3252</p>
-                                <p class="ml-1 mb-0">64%</p>
+                                <p class="ml-1 mb-0">13.2%</p>
                               </div>
                             </div>
                             <div class="d-flex w-100 pt-2">
-                              <p class="mb-0 font-weight-semibold">Michigan</p>
+                              <p class="mb-0 font-weight-semibold">GBPUSD</p>
                               <div class="wrapper ml-auto d-flex align-items-center">
-                                <p class="font-weight-semibold mb-0">4,987</p>
-                                <p class="ml-1 mb-0">30%</p>
+                                <p class="ml-1 mb-0">9.6%</p>
                               </div>
                             </div>
                           </div>
@@ -420,41 +414,41 @@
                     <div class="col-md-12 grid-margin">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title mb-0">Market Watchlist</h4>
+                      <h4 class="card-title mb-0">Most Recently Used Traders</h4>
                       <div class="table-responsive">
                         <table class="table table-stretched">
                           <thead>
                             <tr>
                               <th>Symbol</th>
                               <th>Last Price</th>
-                              <th>Change</th>
+                              <th>Profit</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td>
-                                <p class="mb-1 text-dark font-weight-medium">NFLX</p><small class="font-weight-medium">Netflix, Inc.</small>
+                                <p class="mb-1 text-dark font-weight-medium">Citi</p><small class="font-weight-medium">Citigroup, Inc.</small>
                               </td>
                               <td class="font-weight-medium">$250.00</td>
                               <td class="text-success font-weight-medium">+12.64</td>
                             </tr>
                             <tr>
                               <td>
-                                <p class="mb-1 text-dark font-weight-medium">TSLA</p><small class="font-weight-medium">Tesla, Inc.</small>
+                                <p class="mb-1 text-dark font-weight-medium">JP Morgan</p><small class="font-weight-medium">JPMorgan Chase & Co.</small>
                               </td>
                               <td class="font-weight-medium">$458.00</td>
                               <td class="text-danger font-weight-medium">-14.53</td>
                             </tr>
                             <tr>
                               <td>
-                                <p class="mb-1 text-dark font-weight-medium">GOOG</p><small class="font-weight-medium">Alphabet, Inc.</small>
+                                <p class="mb-1 text-dark font-weight-medium">UBS</p><small class="font-weight-medium">UBS Group AG</small>
                               </td>
                               <td class="font-weight-medium">$250.00</td>
                               <td class="text-danger font-weight-medium">+12.64</td>
                             </tr>
                             <tr>
                               <td>
-                                <p class="mb-1 text-dark font-weight-medium">AMZN</p><small class="font-weight-medium">Amazon.com, Inc.</small>
+                                <p class="mb-1 text-dark font-weight-medium">Deutsche Bank</p><small class="font-weight-medium">Deutsche Bank AG</small>
                               </td>
                               <td class="font-weight-medium">$546.00</td>
                               <td class="text-success font-weight-medium">+24.34</td>

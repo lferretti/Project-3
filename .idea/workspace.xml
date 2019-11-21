@@ -2,53 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2d2b47d-9b32-4a94-b664-22810f2b779e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/forex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulp-tasks/inject.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulp-tasks/inject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/demo_1/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/forex_app/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/demo_1/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/forex_app/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/faces/face8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/faces/face8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/demo_1/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/forex_app/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_dashboard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_layouts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_layouts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_misc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_misc.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/demo_1/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/forex_app/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/charts/chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/charts/chartjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/forms/basic_elements.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/icons/font-awesome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/icons/font-awesome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/blank-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/blank-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/error-404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/error-500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/samples/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/samples/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/tables/basic-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tables/basic-table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/ui-features/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/ui-features/buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/ui-features/dropdowns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/ui-features/dropdowns.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/pages/ui-features/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/ui-features/typography.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/partials/_footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partials/_footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partials/_navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo_1/partials/_sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partials/_sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/forex_app/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/forex_app/dashboard.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>purchase</find>
-      <find>footer</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,7 +88,8 @@
       <workItem from="1574268453631" duration="2046000" />
       <workItem from="1574271305063" duration="938000" />
       <workItem from="1574282494533" duration="2031000" />
-      <workItem from="1574284833711" duration="7508000" />
+      <workItem from="1574284833711" duration="9239000" />
+      <workItem from="1574304512796" duration="8228000" />
     </task>
     <servers />
   </component>

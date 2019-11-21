@@ -31,7 +31,66 @@
       var gradientStrokeFill_2 = salesChartCanvas.createLinearGradient(0, 0, 0, 400);
       gradientStrokeFill_2.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
       gradientStrokeFill_2.addColorStop(0, '#14c671');
-      var data_1_1 = [60, 75, 65, 130, 130, 145, 110, 145, 155, 149, 170];
+      var data_1_1 = [-7.1,
+        37.8,
+        27.9,
+        -4.3,
+        15.3,
+        -10.5,
+        -51.2,
+        -5.6,
+        -0.5,
+        6,
+        25.6,
+        3.8,
+        0.1,
+        23,
+        -9.4,
+        18.1,
+        60.9,
+        17.9,
+        -5.6,
+        61.8,
+        46.7,
+        -15.1,
+        6,
+        34.7,
+        28.3,
+        45.5,
+        7.8,
+        -0.8,
+        30.6,
+        20.1,
+        18.2,
+        21.4,
+        6,
+        -27.4,
+        44,
+        29.3,
+        52.4,
+        30.6,
+        -16.2,
+        -18.4,
+        -8.6,
+        1.1,
+        -44.2,
+        -28.1,
+        -14.6,
+        -12.1,
+        -4.4,
+        4.7,
+        2.2,
+        -21.8,
+        24.4,
+        28.6,
+        -3.2,
+        87.9,
+        32.5,
+        4.1,
+        -47.1,
+        7.2,
+        15.7,
+        -3.5];
       var data_1_2 = [0, 25, 20, 40, 70, 52, 49, 90, 70, 94, 110, 135];
 
       var data_2_1 = [130, 145, 155, 60, 75, 65, 130, 110, 145, 149, 170];
@@ -43,18 +102,71 @@
       var data_4_1 = [130, 145, 65, 130, 75, 145, 149, 170, 110, 155, 60];
       var data_4_2 = [0, 70, 90, 25, 40, 20, 94, 110, 135, 70, 49, 52];
       var areaData = {
-        labels: ["Jan 1", "Jan 7", "Jan 14", "Jan 21", "Jan 28", "Feb 4", "Feb 11", "Feb 18"],
+        labels: ["Minute 0",
+          "Minute 1",
+          "Minute 2",
+          "Minute 3",
+          "Minute 4",
+          "Minute 5",
+          "Minute 6",
+          "Minute 7",
+          "Minute 8",
+          "Minute 9",
+          "Minute 10",
+          "Minute 11",
+          "Minute 12",
+          "Minute 13",
+          "Minute 14",
+          "Minute 15",
+          "Minute 16",
+          "Minute 17",
+          "Minute 18",
+          "Minute 19",
+          "Minute 20",
+          "Minute 21",
+          "Minute 22",
+          "Minute 23",
+          "Minute 24",
+          "Minute 25",
+          "Minute 26",
+          "Minute 27",
+          "Minute 28",
+          "Minute 29",
+          "Minute 30",
+          "Minute 31",
+          "Minute 32",
+          "Minute 33",
+          "Minute 34",
+          "Minute 35",
+          "Minute 36",
+          "Minute 37",
+          "Minute 38",
+          "Minute 39",
+          "Minute 40",
+          "Minute 41",
+          "Minute 42",
+          "Minute 43",
+          "Minute 44",
+          "Minute 45",
+          "Minute 46",
+          "Minute 47",
+          "Minute 48",
+          "Minute 49",
+          "Minute 50",
+          "Minute 51",
+          "Minute 52",
+          "Minute 53",
+          "Minute 54",
+          "Minute 55",
+          "Minute 56",
+          "Minute 57",
+          "Minute 58",
+          "Minute 59"],
         datasets: [{
           label: 'Revenue',
           data: data_1_1,
           borderColor: infoColor,
           backgroundColor: gradientStrokeFill_1,
-          borderWidth: 2
-        }, {
-          label: 'Sales',
-          data: data_1_2,
-          borderColor: successColor,
-          backgroundColor: gradientStrokeFill_2,
           borderWidth: 2
         }]
       };
@@ -132,7 +244,7 @@
       $("#sales-statistics_switch_1").click(function () {
         var data = salesChart.data;
         data.datasets[0].data = data_1_1;
-        data.datasets[1].data = data_1_2;
+        //data.datasets[1].data = data_1_2;
         salesChart.update();
       });
       $("#sales-statistics_switch_2").click(function () {
@@ -157,33 +269,33 @@
     if ($("#net-profit").length) {
       var marksCanvas = document.getElementById("net-profit");
       var marksData = {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct"],
         datasets: [{
-          label: "Sales",
-          backgroundColor: 'rgba(88, 208, 222,0.8)',
-          borderColor: 'rgba(88, 208, 222,0.8)',
+          label: "Profit",
+          backgroundColor: 'rgba(124,252,0,0.8)',
+          borderColor: 'rgba(124,252,0,0.8)',
           borderWidth: 0,
           fill: true,
           radius: 0,
           pointRadius: 0,
           pointBorderWidth: 0,
-          pointBackgroundColor: 'rgba(88, 208, 222,0.8)',
+          pointBackgroundColor: 'rgba(124,252,0,0.8)',
           pointHoverRadius: 10,
           pointHitRadius: 5,
-          data: [54, 45, 60, 70, 54, 75, 60, 54]
+          data: [48.4, 0, 0, 0, 0, 81.2, 0, 2.4, 46.6, 71.5]
         }, {
-          label: "Orders",
-          backgroundColor: 'rgba(150, 77, 247,1)',
-          borderColor: 'rgba(150, 77, 247,1)',
+          label: "Loss",
+          backgroundColor: 'rgba(220,20,60,1)',
+          borderColor: 'rgba(220,20,60,1)',
           borderWidth: 0,
           fill: true,
           radius: 0,
           pointRadius: 0,
           pointBorderWidth: 0,
-          pointBackgroundColor: 'rgba(150, 77, 247,1)',
+          pointBackgroundColor: 'rgba(220,20,60,1)',
           pointHoverRadius: 10,
           pointHitRadius: 5,
-          data: [65, 75, 70, 80, 60, 80, 36, 60]
+          data: [0, 29.1, 13.9, 23.1, 0.1, 0, 10.8, 0, 0, 0]
         }]
       };
 
@@ -516,37 +628,24 @@
       var Marketing_data_2_3 = [375, 440, 284, 450, 386, 480, 400, 365];
       var Marketing_data_2_4 = [425, 480, 324, 490, 426, 520, 440, 405];
 
-      var Marketing_data_1_1 = [145, 238, 148, 293, 242, 235, 256, 334];
+      var Marketing_data_1_1 = [0, 171.6, 0, 0, 144.2, 325.5, 0];
       var Marketing_data_1_2 = [330, 380, 230, 400, 309, 430, 340, 310];
       var Marketing_data_1_3 = [375, 440, 284, 450, 386, 480, 400, 365];
-      var Marketing_data_1_4 = [425, 480, 324, 490, 426, 520, 440, 405];
+      var Marketing_data_1_4 = [0, 0, 40, 32.8, 0, 0, 0];
 
       var MarketingChart = new Chart(MarketingChartCanvas, {
         type: 'bar',
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+          labels: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
           datasets: [{
-              label: 'OVERDUE',
+              label: 'PROFIT',
               data: Marketing_data_1_1,
               backgroundColor: '#826af9',
               borderColor: '#826af9',
               borderWidth: 0
-            }, {
-              label: 'SNOOZED',
-              data: Marketing_data_1_2,
-              backgroundColor: '#9e86ff',
-              borderColor: '#9e86ff',
-              borderWidth: 0
             },
             {
-              label: 'COMPLETED',
-              data: Marketing_data_1_3,
-              backgroundColor: '#d0aeff',
-              borderColor: '#d0aeff',
-              borderWidth: 0
-            },
-            {
-              label: 'OVERDUE',
+              label: 'LOSS',
               data: Marketing_data_1_4,
               backgroundColor: '#f7d2ff',
               borderColor: '#f7d2ff',
