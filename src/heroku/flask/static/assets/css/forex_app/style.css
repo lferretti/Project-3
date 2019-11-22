@@ -403,8 +403,8 @@
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 63px);
-  background: -webkit-gradient(linear, left bottom, left top, from(#5768f3), to(#1c45ef));
-  background: linear-gradient(to top, #5768f3, #1c45ef);
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#000000));
+  background: linear-gradient(to top, #FFFFFF, #000000);
   font-family: "roboto", sans-serif;
   padding: 0;
   width: 270px;
